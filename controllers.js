@@ -18,23 +18,23 @@ currencyApp.controller("ratesController", ["$scope", "$filter", "currencyService
     $scope.currency1 = currencyService.currency1;
     $scope.currency2 = currencyService.currency2;
     $scope.date = dateService.date;
-    
+
     if ($scope.date === "") {
         var today= new Date();
         $scope.date = $filter("date")(today, "dd/MM/yyyy");
     }
-    
-    $scope.getDay = function() {
-        return this.date.slice(0,2);
+
+    $scope.getDay = function () {
+        return this.date.slice(0, 2);
     };
-    
-    $scope.getMonth = function() {
-        return this.date.slice(3,5);
+
+    $scope.getMonth = function () {
+        return this.date.slice(3, 5);
     };
-    
-    $scope.getYear = function() {
-        return this.date.slice(6,10);
+
+    $scope.getYear = function () {
+        return this.date.slice(6, 10);
     };
-    
+
     $scope.ratesOnDate = ratesService.getRates($scope.getDay(), $scope.getMonth(), $scope.getYear());
 }]);
