@@ -3,9 +3,10 @@ currencyApp.service("currencyService", function () {
     this.currency2 = "EUR";
 });
 
-currencyApp.service("dateService", function () {
+currencyApp.service("dateService", ["$filter", function ($filter) {
     this.date = new Date();
-});
+    this.date = $filter("date")(this.date, "dd/MM/yyyy");
+}]);
 
 currencyApp.service("ratesService", ["$resource", function ($resource) {
     this.getRates = function (day, month, year) {
