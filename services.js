@@ -11,7 +11,7 @@ currencyApp.service("dateService", ["$filter", function ($filter) {
 currencyApp.service("ratesService", ["$resource", function ($resource) {
     this.getRates = function (day, month, year) {
         var path = "https://openexchangerates.org/api/historical/";
-        path+=year + "-" + month + "-" + day + ".json";
+        path += year + "-" + month + "-" + day + ".json";
         var ratesAPI = $resource(path, {
             callback: "JSON_CALLBACK"
         }, {
@@ -23,5 +23,5 @@ currencyApp.service("ratesService", ["$resource", function ($resource) {
         return ratesAPI.get({
             app_id: "6e8211081a46446e942ba9478c21fb39"
         });
-    }; 
+    };
 }]);

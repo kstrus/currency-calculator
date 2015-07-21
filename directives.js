@@ -7,14 +7,14 @@ currencyApp.directive("datefieldWidget", function () {
             todayBtn: "linked",
             orientation: "top auto",
             autoclose: true,
-            endDate: "today"
+            endDate: "today",
+            startDate: "01/01/2000"
         });
     };
 
     return {
         restrict: "E",
         link: linkFn,
-        scope: {
-        }
+        scope: {}
     };
 });

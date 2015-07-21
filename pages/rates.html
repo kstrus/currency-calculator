@@ -1,11 +1,12 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h4>Exchange rate: {{getDay()}}.{{getMonth()}}.{{getYear()}}</h4>
+        <h4>Exchange rate {{getDay()}}.{{getMonth()}}.{{getYear()}}</h4>
     </div>
     <div class="panel-body">
-        1 {{currency1}} = {{ratesOnDate.rates[currency2]/ratesOnDate.rates[currency1] | number: 2}} {{currency2}}<br/>
-        1 {{currency2}} = {{ratesOnDate.rates[currency1]/ratesOnDate.rates[currency2] | number: 2}} {{currency1}}
+        1 {{currency1}} = {{ratesOnDate.rates[currency2]/ratesOnDate.rates[currency1] | number: 2}} {{currency2}}
+        <br/> 1 {{currency2}} = {{ratesOnDate.rates[currency1]/ratesOnDate.rates[currency2] | number: 2}} {{currency1}}
     </div>
 </div>
 
-<p><a href="#/">Back to search</a></p>
+<p><a href="#/">Back to search</a>
+</p>

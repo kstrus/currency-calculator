@@ -8,10 +8,14 @@ currencyApp.controller("mainController", ["$scope", "$filter", "$location", "cur
         currencyService.currency2 = $scope.currency2;
         dateService.date = $scope.date;
     });
-    
+
     $scope.submit = function () {
         $location.path("/rates");
     };
+}]);
+
+currencyApp.controller("currency2Controller", ["currencyService", function (currencyService) {
+
 }]);
 
 currencyApp.controller("ratesController", ["$scope", "$filter", "currencyService", "dateService", "ratesService", function ($scope, $filter, currencyService, dateService, ratesService) {
@@ -20,7 +24,7 @@ currencyApp.controller("ratesController", ["$scope", "$filter", "currencyService
     $scope.date = dateService.date;
 
     if ($scope.date === "") {
-        var today= new Date();
+        var today = new Date();
         $scope.date = $filter("date")(today, "dd/MM/yyyy");
     }
 

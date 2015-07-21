@@ -5,11 +5,11 @@
         <label class="col-sm-2 control-label">Currency 1</label>
         <div class="col-sm-2">
             <select class="form-control" ng-model="currency1">
-                <option value="EUR">EUR</option>
-                <option value="PLN">PLN</option>
-                <option value="USD">USD</option>
-                <option value="GBP">GBP</option>
-                <option value="JPY">JPY</option>
+                <option value="EUR" ng-disabled="currency2=='EUR'">EUR</option>
+                <option value="PLN" ng-disabled="currency2=='PLN'">PLN</option>
+                <option value="USD" ng-disabled="currency2=='USD'">USD</option>
+                <option value="GBP" ng-disabled="currency2=='GBP'">GBP</option>
+                <option value="JPY" ng-disabled="currency2=='JPY'">JPY</option>
             </select>
         </div>
     </div>
@@ -18,11 +18,11 @@
         <label class="col-sm-2 control-label">Currency 2</label>
         <div class="col-sm-2">
             <select class="form-control" ng-model="currency2">
-                <option value="EUR">EUR</option>
-                <option value="PLN">PLN</option>
-                <option value="USD">USD</option>
-                <option value="GBP">GBP</option>
-                <option value="JPY">JPY</option>
+                <option value="EUR" ng-disabled="currency1=='EUR'">EUR</option>
+                <option value="PLN" ng-disabled="currency1=='PLN'">PLN</option>
+                <option value="USD" ng-disabled="currency1=='USD'">USD</option>
+                <option value="GBP" ng-disabled="currency1=='GBP'">GBP</option>
+                <option value="JPY" ng-disabled="currency1=='JPY'">JPY</option>
             </select>
         </div>
     </div>
