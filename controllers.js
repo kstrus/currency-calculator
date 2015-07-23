@@ -14,10 +14,6 @@ currencyApp.controller("mainController", ["$scope", "$filter", "$location", "cur
     };
 }]);
 
-currencyApp.controller("currency2Controller", ["currencyService", function (currencyService) {
-
-}]);
-
 currencyApp.controller("ratesController", ["$scope", "$filter", "currencyService", "dateService", "ratesService", function ($scope, $filter, currencyService, dateService, ratesService) {
     $scope.currency1 = currencyService.currency1;
     $scope.currency2 = currencyService.currency2;
